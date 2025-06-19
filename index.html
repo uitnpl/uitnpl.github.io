@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNPL - Tamil Nadu Premier League</title>
+    <style>
+        :root {
+            --primary: #008080;  /* Teal */
+            --secondary: #003366;  /* Navy Blue */
+            --accent: #FFD700;  /* Gold */
+            --light: #F5F5F5;
+            --dark: #333333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--primary);
+        }
+        
+        h2 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">TNPL</div>
+        <div class="tagline">Tamil Nadu Premier League - Celebrating Cricket Talent in Tamil Nadu</div>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <h2>Welcome to TNPL 2024</h2>
+            <p>The Tamil Nadu Premier League is back with another exciting season of cricket featuring the best talent from Tamil Nadu.</p>
+            <div class="countdown" id="countdown">Season Starting Soon!</div>
+            <a href="#" class="btn">Learn More About TNPL</a>
+        </div>
+        
+        <div class="card">
+            <h2>Teams</h2>
+            <p>Eight competitive teams representing different regions of Tamil Nadu will battle for the championship.</p>
+            <a href="#" class="btn">View Team Rosters</a>
+        </div>
+        
+        <div class="card">
+            <h2>Schedule</h2>
+            <p>The complete match schedule will be announced shortly. Stay tuned for updates!</p>
+            <a href="#" class="btn">View Schedule</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Tamil Nadu Premier League. All rights reserved.</p>
+        <p>This is a temporary website. Official site coming soon.</p>
+    </footer>
+    
+    <script>
+        // Simple countdown example - update with actual dates
+        function updateCountdown() {
+            const now = new Date();
+            const seasonStart = new Date('2024-07-15');
+            const diff = seasonStart - now;
+            
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                document.getElementById('countdown').innerHTML = 
+                    `Season Starts In: ${days} Days`;
+            }
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 86400000); // Update daily
+    </script>
+</body>
+</html>
