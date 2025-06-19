@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TNPL - Tamil Nadu Premier League</title>
+    <title>TNPL - Tamil Nadu Newsprint and Papers Limited</title>
     <style>
         :root {
-            --primary: #008080;  /* Teal */
-            --secondary: #003366;  /* Navy Blue */
-            --accent: #FFD700;  /* Gold */
+            --primary: #2E8B57;  /* Forest Green */
+            --secondary: #654321;  /* Dark Brown */
+            --accent: #DAA520;   /* Goldenrod */
             --light: #F5F5F5;
             --dark: #333333;
         }
@@ -31,10 +31,9 @@
         }
         
         .logo {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .tagline {
@@ -56,29 +55,29 @@
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--primary);
+            border-left: 4px solid var(--primary);
         }
         
         h2 {
             color: var(--secondary);
             margin-top: 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
         }
         
         .btn {
             display: inline-block;
-            background-color: var(--primary);
+            background-color: var(--secondary);
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
         }
         
         .btn:hover {
-            background-color: var(--secondary);
+            background-color: var(--primary);
             transform: translateY(-2px);
         }
         
@@ -88,64 +87,90 @@
             text-align: center;
             padding: 1.5rem 0;
             margin-top: 2rem;
+            font-size: 0.9rem;
         }
         
-        .countdown {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 1rem 0;
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://example.com/tnpl-factory.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .feature-item {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(46, 139, 87, 0.1);
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--primary);
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">TNPL</div>
-        <div class="tagline">Tamil Nadu Premier League - Celebrating Cricket Talent in Tamil Nadu</div>
+        <div class="tagline">Tamil Nadu Newsprint and Papers Limited<br>Kagithapuram, Karur District</div>
     </header>
     
     <div class="container">
+        <div class="hero-image"></div>
+        
         <div class="card">
-            <h2>Welcome to TNPL 2024</h2>
-            <p>The Tamil Nadu Premier League is back with another exciting season of cricket featuring the best talent from Tamil Nadu.</p>
-            <div class="countdown" id="countdown">Season Starting Soon!</div>
-            <a href="#" class="btn">Learn More About TNPL</a>
+            <h2>About Us</h2>
+            <p>Tamil Nadu Newsprint and Papers Limited (TNPL) is one of India's leading manufacturers of eco-friendly paper products. Established in 1979, our Kagithapuram plant in Karur District produces high-quality newsprint and printing & writing paper using sustainable practices.</p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <h3>Our Products</h3>
+                    <p>Newsprint, Printing & Writing Paper, and Specialty Papers</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Capacity</h3>
+                    <p>400,000 TPA of paper production</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Sustainability</h3>
+                    <p>ISO 14001 certified environmental management</p>
+                </div>
+            </div>
+            
+            <a href="#" class="btn">Learn More About Our Company</a>
         </div>
         
         <div class="card">
-            <h2>Teams</h2>
-            <p>Eight competitive teams representing different regions of Tamil Nadu will battle for the championship.</p>
-            <a href="#" class="btn">View Team Rosters</a>
+            <h2>Our Facilities</h2>
+            <p>Spread over 2,500 acres in Kagithapuram, our integrated pulp and paper mill features state-of-the-art technology and one of the most sophisticated effluent treatment plants in the industry.</p>
+            <a href="#" class="btn">Virtual Tour</a>
         </div>
         
         <div class="card">
-            <h2>Schedule</h2>
-            <p>The complete match schedule will be announced shortly. Stay tuned for updates!</p>
-            <a href="#" class="btn">View Schedule</a>
+            <h2>Sustainability Initiatives</h2>
+            <p>TNPL is committed to environmentally responsible manufacturing with initiatives including:</p>
+            <ul>
+                <li>100% utilization of agro-residues as raw material</li>
+                <li>Extensive plantation program (over 100 million saplings planted)</li>
+                <li>Comprehensive water recycling systems</li>
+                <li>Renewable energy generation</li>
+            </ul>
+            <a href="#" class="btn">Our Green Initiatives</a>
         </div>
     </div>
     
     <footer>
-        <p>&copy; 2025 Tamil Nadu Premier League. All rights reserved.</p>
-        <p>This is a temporary website. Official site coming soon.</p>
+        <p>Tamil Nadu Newsprint and Papers Limited (TNPL)<br>
+        Kagithapuram, Karur District - 639 136, Tamil Nadu, India<br></p>
+        <p>&copy; 2025 TNPL. All Rights Reserved.</p>
     </footer>
-    
-    <script>
-        // Simple countdown example - update with actual dates
-        function updateCountdown() {
-            const now = new Date();
-            const seasonStart = new Date('2024-07-15');
-            const diff = seasonStart - now;
-            
-            if (diff > 0) {
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                document.getElementById('countdown').innerHTML = 
-                    `Season Starts In: ${days} Days`;
-            }
-        }
-        
-        updateCountdown();
-        setInterval(updateCountdown, 86400000); // Update daily
-    </script>
 </body>
 </html>
